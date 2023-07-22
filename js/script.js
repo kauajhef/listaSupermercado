@@ -40,6 +40,7 @@ document.querySelector('input[type=submit]').addEventListener('click', ()=>{
     soma = soma.toFixed(2); //para ter só duas casas decimais apenas!
     nomeProduto.value = '';
     precoProduto.value = ''; //zerar os inputs
+    nomeProduto.focus();  //focar no nome do produto
 
     let elementoSoma = document.querySelector('.soma-produto h1');
 
@@ -56,3 +57,24 @@ document.querySelector('button[name=limpar]')
     document.querySelector('.soma-produto h1').innerHTML = " Total: R$0"
     
 })
+
+
+let btnAdd = document.getElementById('btn-Add')
+
+document.querySelector('input[type=text]').addEventListener("keyup", function (event) {
+  //SE TECLOU ENTER (13) = TECLA DO ENTER
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    btnAdd.click();
+
+    
+  }
+});
+
+document.querySelector('input[type=number]').addEventListener("keyup", function (event) {
+    //SE TECLOU ENTER (13) = TECLA DO ENTER
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      btnAdd.click();
+    }
+});
