@@ -25,6 +25,7 @@ document.querySelector('input[type=submit]').addEventListener('click', ()=>{
 
     items.map(function(val){
         soma+=parseFloat(val.valor); //parseInt para transformar em numero e tirar da string e parseFloat para adicionar os valores dps da virgula ou no caso os centavos
+
         
         
         listaProdutos.innerHTML += `
@@ -37,6 +38,8 @@ document.querySelector('input[type=submit]').addEventListener('click', ()=>{
         `;
 
     })
+
+
     soma = soma.toFixed(2); //para ter só duas casas decimais apenas!
     nomeProduto.value = '';
     precoProduto.value = ''; //zerar os inputs
@@ -67,7 +70,7 @@ document.querySelector('input[type=text]').addEventListener("keyup", function (e
     event.preventDefault();
     btnAdd.click();
 
-    
+
   }
 });
 
